@@ -1,6 +1,6 @@
 # UIDAI_Hackathon2021
 
-Shortlisted in Top 15 
+Shortlisted Top 15 under PS 1 category UIDAI Hackathon.
 <hr>
 
 <h3>This project is build completely with PYTHON GUI</h3>
@@ -25,4 +25,5 @@ Shortlisted in Top 15
 
 
 <hr>
+
 This project is created by Ayush Seth for Aadhar Hackathon 2021.
