@@ -29,6 +29,7 @@ otp1 = random.randint(100000, 999999)
 
 # SENDING OTP via EMAIL
 
+
 def send_otp():
     try:
         account_sid = "AC027b5927043dd3843068d66b750e488a"
