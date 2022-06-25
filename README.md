@@ -1,6 +1,6 @@
 # UIDAI_Hackathon2021
 
-Shortlisted Top 15 under PS 1 category UIDAI Hackathon.
+Shortlisted in Top 15 under Problem Statement Category(1) UIDAI HACHATHON 2021.
 <hr>
 
 <h3>This project is build completely with PYTHON GUI</h3>
@@ -10,7 +10,8 @@ Shortlisted Top 15 under PS 1 category UIDAI Hackathon.
   <li>Email Login Page</li>
   <li>Captcha Generator and Validation</li>
   <li>Irrelevant Input Checking</li>
-  <li>Used Most from the GUI</li>
+  <li>8 Functional windows</li>
+  <li>Complete use of GUI</li>
 </ul>
 
 <h3>How to Run the project?</h3>
