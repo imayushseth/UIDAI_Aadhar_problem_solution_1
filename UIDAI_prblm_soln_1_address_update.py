@@ -5,6 +5,17 @@ from tkinter import messagebox
 from twilio.rest import Client
 import smtplib
 
+# IN THIS PROJECT I FIRST SEPARATED EVERY GUI PAGE,
+# AFTER THAT I MERGED ALL IN ONE .. YES I COULD HAVE ADDED THEM IN CLASSES AND
+# HAVE BEEN LESSER AMOUNT, IT WAS MY FIRST PROJECT :)
+
+# ALL OTP SERVER ARE NOW NULL AND VOID
+# DUE TO PRIVACY REASONS AND TERMS OF CONDITIONS
+
+
+# BUT YOU STILL CAN RUN ALL THE GUI
+
+
 dark_blue = '#28118f'
 light_blue = '#23c3eb'
 
@@ -16,6 +27,7 @@ for i in range(6):
 
 otp1 = random.randint(100000, 999999)
 
+# SENDING OTP via EMAIL
 
 def send_otp():
     try:
@@ -41,12 +53,10 @@ def send_otp():
 
     except:
 
-        messagebox.showerror(title="Can't Proceed",
-                             message="The number is unverified.\n"
-                                     "Trial accounts cannot send messages to unverified numbers;\n"
-                                     " verify at twilio.com / user / account / phone \n"
-                                     "- numbers / verified.\n"
-                                     "Or else, Check your mail.")
+        messagebox.showerror(title="Can't send OTP to phone number or Email",
+                             message=f"Due to end of Subscription and Secutity/Privacy purpose, "
+                                     f"OTP can't be send but still, you can go further."
+                                     f"Your login OTP is {otp1}")
 
     entered_email = email_tf.get()
 
@@ -76,10 +86,15 @@ def send_otp():
         print('Unable to sign in ')
 
 
+# CHECKING
+
 def submit():
     entered_otp = int(otp_tf.get())
     check_num()
     check_captcha()
+
+    # IF OTP IS CORRECT PROCEED
+
     if entered_otp == otp1:
         messagebox.showinfo(title='Validated', message='OTP IS Correct')
         w7.destroy()
@@ -93,6 +108,9 @@ def submit():
                                 message="Sorry,\nYou can't use this\n feature right now.")
 
         def update_aadhaar():
+
+            # DELETING PREVIOUS WINDOW
+
             window.destroy()
 
             def proceed():
@@ -187,10 +205,8 @@ def submit():
                                     except:
 
                                         messagebox.showerror(title="Can't Proceed",
-                                                             message="The number is unverified.\n"
-                                                                     "You can't Generate OTP on this number right now\n"
-                                                                     "OTP is right here on Top Left\n"
-                                                                     "Must See my Video Explanation Sent to You")
+                                                             message="Similar reason can't send OTP..."
+                                                                     "Don't worry OTP is just at TOP LEFT corner of window.")
 
                                 go_otp2()
 
@@ -1022,4 +1038,3 @@ Button(w7,
        pady=3,
        command=send_otp).place(x=665, y=658)
 
-w7.mainloop()
